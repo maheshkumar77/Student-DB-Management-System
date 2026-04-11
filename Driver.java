@@ -25,7 +25,12 @@ public static void main(String[] args) throws SQLException {
 			 s2.update();
 				//System.out.println("****UPDATE THE DATA****");
 		 }
-		
+   
+		 case 2:
+		 if(i==2) {
+			 s2.update();
+				//System.out.println("****UPDATE THE DATA****");
+		 
 	 case 3:
 		 if(i==3) {
 			 s2.delete();
