@@ -59,18 +59,6 @@ public static void main(String[] args) throws SQLException {
 	
 	}
 }
-		 case 5:
-		 if(i==5) {
-			 s2.exit();
-				System.out.println("***OUT FROM THE APPLICATION***");
-				s.close();  // Close the scanner
-                return;  // Exit the program
-		 }
-		 default:
-			 
-		 System.out.println("***********INVALID CHOICE********");
 		
-		 
-	 } 
 		
 }
