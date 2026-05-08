@@ -191,5 +191,38 @@ public class Service {
         }
         
     }
+         try (PreparedStatement pst = con.prepareStatement(query)) {
+                    System.out.println("Enter the new value for " + field + ":");
+                    if (field.equals("age")) {
+                        int newValue = sc.nextInt();
+                        pst.setInt(1, newValue);
+                    } else {
+                        String newValue = sc.nextLine();
+                        pst.setString(1, newValue);
+                    }
+                    pst.setInt(2, id);
 
+                    int up = pst.executeUpdate();
+                    if (up > 0) {
+                        System.out.println("**********UPDATED SUCCESSFULLY***********");
+                    } else {
+                        System.out.println("No record found with the given ID.");
+                    }
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+        
+        public void exit() {
+        	//System.out.println("OUT FROM THE APPLICATION");
+        	try {
+				con.close();
+				System.out.println("Connection was closed....");
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+        }
 
